@@ -14,9 +14,10 @@ RUN apt-get update && apt-get install -y \
   ; cd /opt/gnat/lib/gnat/manifests \
   ; rm -f `grep ^[0-9a-f] *|cut -d\  -f2` * \
   ; cd /opt/gnat \
-  ; rm -rf bin/gnat{doc,inspect} bin/gps* etc include/py* \
-    lib/{girepository-1.0,gps,gtk-3.0,python2.7} \
-    share/doc/gps share/examples/gps share/{glib-2.0,gps,icons,themes} \
+  ; rm -rf bin/gnatdoc bin/gnatinspect bin/gps* etc include/py* \
+    lib/girepository-1.0 lib/gps lib/gtk-3.0 lib/python2.7 \
+    share/doc/gps share/examples/gps share/glib-2.0 share/gps \
+    share/icons share/themes \
  && find /opt/gnat/ -type d -empty -delete \
  && rm -rf /tmp/gnat-gpl-2017-x86_64-linux-bin \
  && apt-get clean \
