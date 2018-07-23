@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y \
  && /tmp/gnat-community-2018-20180528-x86_64-linux-bin \
    --platform minimal --script /tmp/script.qs \
  && gprinstall --uninstall gpr \
- && gprinstall --uninstall aunit \
  && gprinstall --uninstall xmlada \
  && gprinstall --uninstall aws \
  && gprinstall --uninstall zfp_native_x86_64 \
