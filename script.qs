@@ -12,6 +12,7 @@ Controller.prototype.ComponentSelectionPageCallback = function()
 
     page.deselectAll();
     page.selectComponent("com.adacore.gnat");
+    page.selectComponent("com.adacore.spark2014_discovery");
     gui.clickButton(buttons.NextButton);
 }
 
