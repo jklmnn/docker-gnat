@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y \
  curl \
  make \
  libc-dev \
- && curl -sSf http://mirrors.cdn.adacore.com/art/5b0d7bffa3f5d709751e3e04 \
-  --output /tmp/gnat-community-2018-20180528-x86_64-linux-bin \
- && chmod +x /tmp/gnat-community-2018-20180528-x86_64-linux-bin \
- && /tmp/gnat-community-2018-20180528-x86_64-linux-bin \
+ && curl -sSf http://mirrors.cdn.adacore.com/art/5cdffc5409dcd015aaf82626 \
+  --output /tmp/gnat-community-2019-20190517-x86_64-linux-bin \
+ && chmod +x /tmp/gnat-community-2019-20190517-x86_64-linux-bin \
+ && /tmp/gnat-community-2019-20190517-x86_64-linux-bin \
    --platform minimal --script /tmp/script.qs \
  && gprinstall --uninstall gpr \
  && gprinstall --uninstall xmlada \
@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
   ; cd /opt/gnat \
   ; rm -rf maintenancetool* share/gps \
  && find /opt/gnat/ -type d -empty -delete \
- && rm -rf /tmp/gnat-community-2018-20180528-x86_64-linux-bin \
+ && rm -rf /tmp/gnat-community-2019-20190517-x86_64-linux-bin \
  && apt-get purge -y --auto-remove fontconfig dbus curl libx11-6 libx11-xcb1 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
